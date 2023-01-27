@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- using fav icon -->
+    <link rel="shortcut icon" href="Resources/favicon.png" type="image/x-icon">
+
+    <!-- using cairo font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- calling the landing page css file -->
+    <link rel="stylesheet" href="CSS/faq.css">
+
+    <title>مبرمجين الأردن</title>
+</head>
+<body>
+
+    <!-- making the navbar -->
+    <nav>
+        <h1><img width="30" src="../Resources/flag.png"> مبرمجين الأردن</h1>
+        
+        <ul>
+            <li><a href="../Articles/articlesMain.html">مقالات</a></li>
+            <li><a href="../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <li><a href="../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+        
+        <p id="showList">عرض القائمة</p>
+    </nav>
+
+    <!-- side list for mobile version -->
+    <div id="list">
+        <h1 id="hideList">اغلاق القائمة</h1><hr>
+        <ul>
+            <li><a href="../Articles/articlesMain.html">مقالات</a></li>
+            <hr>
+            <li><a href="../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <hr>
+            <li><a href="../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+
+    <div class="questions">
+        <div class="question">
+            <h1>كيف تم عمل هذا الموقع ؟</h1>
+            <p>html css javascript باستخدام</p>
+        </div>
+
+        <div class="question">
+            <h1>من نحن ؟</h1>
+            <p>الاجابة على هذا السؤال <a style="color: rgb(68, 149, 255);" href="../WhoAreWe/whoarewe.html">هنا</a></p>
+        </div>
+
+        <div class="question">
+            <h1>هل الموقع مجاني ؟</h1>
+            <p>نعم, هذا الموقع التعليمي مجاني تماما</p>
+        </div>
+
+        <div class="question">
+            <h1>هل يجوز لي نسخ المقالات ونشرها</h1>
+            <p>نعم, ولكن مع اضافة رابط الموقع او اسم الكاتب</p>
+        </div>
+    </div>
+
+
+
+    <!-- the footer -->
+    <footer>
+        <p>Made With Love By Hamza Almhameed</p>
+        <p>All Reights Reserved © Jordan Coders 2023</p>
+    </footer>
+</body>
+<script>
+//main variables
+let showList = document.getElementById("showList");
+let list = document.getElementById("list");
+let hideList = document.getElementById("hideList");
+
+//show/hide list commands
+showList.onclick = function () {
+    list.style.display = "block";
+}
+hideList.onclick = function () {
+    list.style.display = "none";
+}
+</script>
+</html>

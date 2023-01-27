@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- using fav icon -->
+        <link rel="shortcut icon" href="../../Resources/favicon.png" type="image/x-icon">
+        
+        <!-- using cairo font from google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap" rel="stylesheet">
+        
+        <!-- styling -->
+        <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(23, 20, 29);
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(23, 20, 29);
+    box-shadow: rgb(41, 35, 53) 0 0 30px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+#showList{
+    user-select: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: none;
+}
+
+#list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 24, 36);
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+#list a{
+    color: white;
+    text-decoration: none;
+}
+
+#list a:hover{
+    text-decoration: underline;
+}
+
+#list ul li{
+    margin: 50px;
+    list-style: none;
+    font-size: 1.5em;
+}
+
+#list h1{
+    text-decoration: underline;
+}
+
+#article{
+    background-image: url(../../Resources/heroSectionBg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px;
+    height: 90vh;
+    overflow-y: scroll;
+    color: white;
+    font-size: larger;
+}
+
+#article p{
+    background-color: rgba(0, 0, 0, 0.438);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    direction: rtl;
+    
+}
+
+footer{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    padding: 20px;
+}
+
+/* responsive design */
+@media only screen and (max-width: 556px) {
+    #showList{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    #article{
+        padding: 0;
+    }
+
+    #article p{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+        </style>
+        
+        <title>مبرمجين الأردن</title>
+    </head>
+<body>
+    <!-- making the navbar -->
+    <nav>
+        <h1><img width="30" src="../../Resources/flag.png"> مبرمجين الأردن</h1>
+        
+        <ul>
+            <li><a href="../../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <li><a href="../../FAQ/faq.html">اسئلة شائعة</a></li>
+            <li><a href="../../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+        
+        <p id="showList">عرض القائمة</p>
+    </nav>
+
+    <!-- side list for mobile version -->
+    <div id="list">
+        <h1 id="hideList">اغلاق القائمة</h1><hr>
+        <ul>
+            <li><a href="../../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <hr>
+            <li><a href="../../FAQ/faq.html">اسئلة شائعة</a></li>
+            <hr>
+            <li><a href="../../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+
+    <!-- the article -->
+    <div id="article">
+        <p id="articleContent"></p>
+    </div>
+
+
+    <!-- the footer -->
+    <footer>
+        <p>Made With Love By Hamza Almhameed</p>
+        <p>All Reights Reserved © Jordan Coders 2023</p>
+    </footer>
+</body>
+<script>
+    //main variables
+    let showList = document.getElementById("showList");
+    let list = document.getElementById("list");
+    let hideList = document.getElementById("hideList");
+    
+    //show/hide list commands
+    showList.onclick = function () {
+        list.style.display = "block";
+    }
+    hideList.onclick = function () {
+        list.style.display = "none";
+    }
+
+
+    window.onload = function () {
+        document.getElementById("articleContent").innerText = `
+        السلام عليكم 
+راح أعرض لكم لغة Javascript واعرفها بالتفصيل:
+هي لغة برمجة عالية المستوى وواحدة من أهم لغات البرمجة، وهي إحدى التقنيات الأساسية لشبكة الويب العالمية. يتم استخدام هذه اللغة كلغة برمجة من جانب العميل بنسبة 97.8% من جميع مواقع الويب. في البداية، تم استخدام JavaScript فقط لتطوير متصفحات الويب، ولكنها تُستخدم الآن لنشر مواقع الويب من جانب الخادم والتطبيقات التي لا تعتمد على متصفحات الويب أيضًا. تم إنشاء لغة Javascript في عام 1995 وكانت تُعرف في البداية باسم LiveScript. في ذلك الوقت، كانت Java لغة شائعة جدًا ومستخدمة بكثرة، لذلك تم الإعلان عن Javascript على أنها "الأخ الأصغر" للغة Java. مع تطورها بمرور الوقت، أصبحت JavaScript لغة متميزة ومستقلة تمامًا. في الوقت الحاضر، غالبًا ما يتم الخلط بين JavaScript و Java، وعلى الرغم من وجود بعض أوجه التشابه بينهما، إلا أن اللغتين مختلفتان. تُعتبر لغة Javascript، لغة البرمجة الأكثر شيوعًا في العالم وهي مطلوبة بشدة بين مختلف المنظمات. يكسب مطور Javascript في المتوسط حوالي 112,152 دولار سنويًا.
+ مميزات Javascript: سهلة التعلم والتنفيذ. تُستخدم في كل مكان على الويب. يمكن تشغيلها على الفور داخل المتصفح ورؤية النتيجة على الواجهة الأمامية للمستخدم. تقلل الطلب على خادم الموقع. 
+سلبيات Javascript: يمكن أحيانًا تفسيرها بشكل مختلف من قبل المتصفحات المختلفة مما يجعل من الصعب كتابة التعليمات البرمجية عبر المتصفحات. 
+        `
+    }
+</script>
+</html>

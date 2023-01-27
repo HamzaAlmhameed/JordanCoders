@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- cairo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- calling the css file -->
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <!-- using font awseome library for the icons -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+
+    <title>مبرمجين الأردن</title>
+</head>
+<body>
+    <!-- This div contains the whole content on the website -->
+    <div class="all">
+
+        <!-- this form contains the input fields and the title for the email sending box -->
+        <form class="email-sending">
+            <h1 style="text-align: center;">تواصل معنا</h1>
+            <p style="text-align: center;">ارسل لنا ملاحظاتك, تعليقاتك, نصائحك او اي شيء ترغب باعلامنا به</p>
+            <input required placeholder="الاسم" class="name" type="text">
+            <input required placeholder="البريد الالكتروني" class="email" type="email">
+            <input required placeholder="رسالتك" class="message" type="text">
+            <button onclick='alert("هذه الخدمة غير متاحة حاليا يمكنك التواصل من خلال بريدنا الالكتروني")' class="send-button">ارسال</button>
+        </form>
+
+        <!-- this div is for the info that contains email, number etc... -->
+        <div class="info">
+            <h1>معلومات للاتصال</h1>
+            <div class="email-info">
+                <i class="fa-solid fa-envelope"></i>
+                <span>hamza.10.almhameed@gmail.com</span>
+            </div>
+
+            <div class="number-info">
+                <i class="fa-solid fa-phone"></i>
+                <span>07XXXXXXXX</span>
+            </div>
+
+            <div class="time-info">
+                <i class="fa-solid fa-clock"></i>
+                <span>يمكنكم التواصل في اي وقت</span>
+            </div>
+        </div>
+
+        <!-- this is the yellow box at the right of the page -->
+        <div class="yellow-box">
+            <a href="https://web.facebook.com/groups/3259217927675207/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <!-- this div is for the drop down in the left of the page -->
+        <div class="drop-down">
+            <h1><a href="../index.html"><i class="fa-solid fa-house-chimney"></i></a></h1>
+        </div>
+    </div>
+</body>
+<!-- calling the javascript file -->
+<script src="JS/script.js"></script>
+</html>

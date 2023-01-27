@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- using fav icon -->
+    <link rel="shortcut icon" href="Resources/favicon.png" type="image/x-icon">
+
+    <!-- using cairo font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- calling the landing page css file -->
+    <link rel="stylesheet" href="CSS/landingPage.css">
+
+    <title>مبرمجين الأردن</title>
+</head>
+<body>
+
+    <!-- making the navbar -->
+    <nav>
+        <h1><img width="30" src="Resources/flag.png"> مبرمجين الأردن</h1>
+        
+        <ul>
+            <li><a href="Articles/articlesMain.html">مقالات</a></li>
+            <li><a href="WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <li><a href="FAQ/faq.html">اسئلة شائعة</a></li>
+            <li><a href="Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+        
+        <p id="showList">عرض القائمة</p>
+    </nav>
+
+    <!-- side list for mobile version -->
+    <div id="list">
+        <h1 id="hideList">اغلاق القائمة</h1><hr>
+        <ul>
+            <li><a href="Articles/articlesMain.html">مقالات</a></li>
+            <hr>
+            <li><a href="WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <hr>
+            <li><a href="FAQ/faq.html">اسئلة شائعة</a></li>
+            <hr>
+            <li><a href="Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+
+    <!-- hero section -->
+    <div id="hero">
+        <h1>مرحبا بكم في موقع <br><img style="border-radius: 5px;" width="50" src="Resources/flag.png">  مبرمجين الأردن</h1>
+        <button id="explore">ابدأ الاستكشاف</button>
+    </div>
+
+
+    <!-- latest articles -->
+    <div id="latestArticles">
+
+        <h1>آخر المقالات</h1>
+
+        <div class="article">
+            <h1>مقدمة عن مجال تطوير الألعاب</h1>
+            <p>برمجة او تطوير الألعاب يعتبر من اجمل واكثر مجالات البرمجة تنوعا, في هذا المقال رح اتكلم عن المجال بشكل عام</p>
+            <button><a href="Articles/gameDevArticle/gameDev.html">عرض المقال كامل</a></button>
+            <p>2023/1/25</p>
+        </div>
+
+        <div class="article">
+            <h1>أفضل قنوات يوتيوب لتعلم البرمجة</h1>
+            <p>اليوتيوب مليان مصادر لتعلم البرمجة منها السيء ومنها الممتاز, في هذا المقال جبتلكم افضل قنوات لتعلم البرمجة</p>
+            <button><a href="Articles/youtubeChannelsArticle/YoutubeChannels.html">عرض المقال كامل</a></button>
+            <p>2023/1/25</p>
+        </div>
+
+        <div class="article">
+            <h1>Javascript</h1>
+            <p>جافاسكربت من اشهر اللغات واكثرها شيوعا, تعرف اكثر عن هذه اللغة من خلال هذا المقال</p>
+            <button><a href="Articles/JSarticle/JS.html">عرض المقال كامل</a></button>
+            <p>2023/1/25</p>
+        </div>
+    </div>
+
+
+    <!-- the footer -->
+    <footer>
+        <p>Made With Love By Hamza Almhameed</p>
+        <p>All Reights Reserved © Jordan Coders 2023</p>
+    </footer>
+    <script src="JS/landingPage.js"></script>
+</body>
+</html>
