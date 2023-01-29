@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- using fav icon -->
+        <link rel="shortcut icon" href="../../Resources/favicon.png" type="image/x-icon">
+        
+        <!-- using cairo font from google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600;800&display=swap" rel="stylesheet">
+        
+        <!-- styling -->
+        <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(23, 20, 29);
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(23, 20, 29);
+    box-shadow: rgb(41, 35, 53) 0 0 30px;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    list-style: none;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+#showList{
+    user-select: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: none;
+}
+
+#list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 24, 36);
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+#list a{
+    color: white;
+    text-decoration: none;
+}
+
+#list a:hover{
+    text-decoration: underline;
+}
+
+#list ul li{
+    margin: 50px;
+    list-style: none;
+    font-size: 1.5em;
+}
+
+#list h1{
+    text-decoration: underline;
+}
+
+#article{
+    background-image: url(../../Resources/heroSectionBg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px;
+    height: 90vh;
+    overflow-y: scroll;
+    color: white;
+    font-size: larger;
+}
+
+#article p{
+    background-color: rgba(0, 0, 0, 0.438);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    direction: rtl;
+    
+}
+
+footer{
+    color: white;
+    background-color: rgb(19, 19, 19);
+    padding: 20px;
+}
+
+/* responsive design */
+@media only screen and (max-width: 556px) {
+    #showList{
+        display: block;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    #article{
+        padding: 0;
+    }
+
+    #article p{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+        </style>
+        
+        <title>مبرمجين الأردن</title>
+    </head>
+<body>
+    <!-- making the navbar -->
+    <nav>
+        <h1><img width="30" src="../../Resources/flag.png"> مبرمجين الأردن</h1>
+        
+        <ul>
+            <li><a href="../../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <li><a href="../../FAQ/faq.html">اسئلة شائعة</a></li>
+            <li><a href="../../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+        
+        <p id="showList">عرض القائمة</p>
+    </nav>
+
+    <!-- side list for mobile version -->
+    <div id="list">
+        <h1 id="hideList">اغلاق القائمة</h1><hr>
+        <ul>
+            <li><a href="../../WhoAreWe/whoarewe.html">من نحن؟</a></li>
+            <hr>
+            <li><a href="../../FAQ/faq.html">اسئلة شائعة</a></li>
+            <hr>
+            <li><a href="../../Contact/contact.html">اتصل بنا</a></li>
+        </ul>
+    </div>
+
+
+    <!-- the article -->
+    <div id="article">
+        <p id="articleContent"></p>
+    </div>
+
+
+    <!-- the footer -->
+    <footer>
+        <p>Made With Love By Hamza Almhameed</p>
+        <p>All Reights Reserved © Jordan Coders 2023</p>
+    </footer>
+</body>
+<script>
+    //main variables
+    let showList = document.getElementById("showList");
+    let list = document.getElementById("list");
+    let hideList = document.getElementById("hideList");
+    
+    //show/hide list commands
+    showList.onclick = function () {
+        list.style.display = "block";
+    }
+    hideList.onclick = function () {
+        list.style.display = "none";
+    }
+
+
+    window.onload = function () {
+        document.getElementById("articleContent").innerText = `
+
+        السلام عليكم 
+اليوم حاب أحكي للناس الي اول مرة تدخل عالم البرمجة وحابة تتعلمه.
+البرمجة عبارة عن تخصصات او مجالات وهي:
+1. مجال برمجة الويب 
+2. مجال برمجة تطبيقات الهواتف الذكية
+3.مجال برمجة تطبيقات سطح المكتب
+4.مجال تحليل البيانات
+5.مجال برمجة الألعاب
+6.مجال تعليم الآلة أو الذكاء الإصطناعي
+7.مجال إنترنت الأشياء
+8.مجال الروبوتيك
+9.الحوسبة السحابية
+يمكنك اختيار تخصصك او مجالك والبحث عنه والبدأ في تعلمه ولا تيأس ولا تمل من التعلم.
+
+-ماجد الخطاطبة
+`
+    }
+</script>
+</html>
